@@ -37,7 +37,7 @@ constructor(props){
         return  (
             <React.Fragment>
             <div>
-            <button onClick={this.fetchMethod}> function </button>
+            <button onClick={this.fetchMethod}> GEt </button>
                  <div>Hello from NewApp   </div>
                  <MyFirstComponent newAppText={"text from NewApp"} />
                  
@@ -50,12 +50,12 @@ constructor(props){
                     //return element["data"]
                     return <Card
                             title={elementJSON["title"]}
-                            descripcion={elementJSON["description"]}
+                            description={elementJSON["description"]}
                             image={elementJSON["image"]}
                             ></Card>
                  })}
             </div>
-            <button onClick={this.handlePostData}> function </button>
+            <button onClick={this.handlePostData}> Post </button>
                  <div>Hello from handlePost   </div>
 
               

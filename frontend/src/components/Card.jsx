@@ -1,24 +1,33 @@
-import React from 'react';
+
+import * as React from 'react';
+import CardMUI from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
 
 function Card({title, description, image })  {
         return(
-        <React.Fragment>
-            <div>Title: {title} </div>
-            <div>Descripcion: {description}</div>
-            <div>
-                <img 
-                src={image}
-                style={{
-                    width:300,
-                    height:200
-
-
-                }}></img>
-            </div>
-        </React.Fragment>
-    );
+            <CardMUI sx={{ maxWidth: 345 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={image}
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h3" component="div">
+                  {title}
+                 
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {description}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </CardMUI>
         
-
-
-}
-export default Card;
+    );
+  }
+  export default Card;
