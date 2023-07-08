@@ -61,6 +61,8 @@ function getAll(req, res) {
   });
   }
 
+
+  
   // Function to post
 function addData(req, res) {
   console.log("Add DATA REQ: ",req)
